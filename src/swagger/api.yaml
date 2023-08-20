@@ -1,0 +1,16 @@
+paths:
+  /otp/getOTP:
+    post:
+      summary: This API call will generate an OTP and send it to the designated email.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+      responses: 
+        '200':
+          description: Verification otp sent
